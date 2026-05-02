@@ -10,7 +10,7 @@ export default defineConfig({
     sallaTransformPlugin(),
     sallaBuildPlugin(),
     sallaDemoPlugin({
-      components: ['independent-cart', 'expanding-products'],
+      components: ['expanding-products'],
       grid: {
         columns: '1fr',
         gap: '1rem',

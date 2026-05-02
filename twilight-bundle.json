@@ -12,17 +12,6 @@
     "repository": "https://github.com/almogerayaseen/tw-golden",
     "components": [
         {
-            "name": "independent-cart",
-            "display_name": {
-                "en": "Independent Cart",
-                "ar": "سلة مستقلة"
-            },
-            "description": {
-                "en": "A standalone floating shopping cart component with local storage.",
-                "ar": "مكون سلة مشتريات عائم ومستقل مع حفظ محلي."
-            }
-        },
-        {
             "name": "expanding-products",
             "key": "59850378-d617-4514-bcd7-aac43f973985",
             "title": {

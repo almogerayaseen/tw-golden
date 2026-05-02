@@ -215,26 +215,6 @@ Run `pnpm run dev` to start the development server. This will:
 2. Enable hot module reloading
 3. Provide a development environment for testing
 
-## Independent Cart
-
-This bundle includes the `independent-cart` component, a standalone floating cart that stores items in the browser's local storage.
-
-To add a product from any page script:
-
-```js
-window.dispatchEvent(new CustomEvent('tw-cart:add', {
-  detail: {
-    id: 'product-1',
-    name: 'Product name',
-    price: 99,
-    quantity: 1,
-    image: 'https://example.com/product.jpg'
-  }
-}));
-```
-
-The component emits `cart-updated` whenever items change and `cart-checkout` when the checkout button is pressed. You can pass `checkoutUrl` through the component config to redirect users after checkout.
-
 ## Expanding Products
 
 The `expanding-products` component converts the provided CSS, Twig, JavaScript, and Twilight fields into a standalone Twilight component. It reads the first `cospecail` collection item, renders `salla-products-list` from the selected category, and applies the expanding-card layout after Salla product cards are loaded.
