@@ -1,7 +1,7 @@
 {
     "name": {
         "en": "Golden",
-        "ar": "\u0630\u0647\u0628\u064a"
+        "ar": "ذهبي"
     },
     "description": {
         "en": "",
@@ -10,5 +10,87 @@
     "author_email": "Almogerayaseen@gmail.com",
     "support_url": "",
     "repository": "https://github.com/almogerayaseen/tw-golden",
-    "components": []
+    "components": [
+        {
+            "name": "independent-cart",
+            "display_name": {
+                "en": "Independent Cart",
+                "ar": "سلة مستقلة"
+            },
+            "description": {
+                "en": "A standalone floating shopping cart component with local storage.",
+                "ar": "مكون سلة مشتريات عائم ومستقل مع حفظ محلي."
+            }
+        },
+        {
+            "name": "expanding-products",
+            "key": "59850378-d617-4514-bcd7-aac43f973985",
+            "title": {
+                "en": "special product",
+                "ar": "منتجات مميزه"
+            },
+            "display_name": {
+                "en": "Expanding Products",
+                "ar": "منتجات مميزه"
+            },
+            "description": {
+                "en": "Interactive expanding product cards powered by Salla products list.",
+                "ar": "عرض منتجات تفاعلي ببطاقات تتمدد اعتمادًا على قائمة منتجات سلة."
+            },
+            "icon": "sicon-cart2",
+            "path": "home.specialpro",
+            "fields": [
+                {
+                    "id": "cospecail",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "Collection",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "cospecail.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان",
+                            "multilanguage": true
+                        },
+                        {
+                            "id": "cospecail.subtitle",
+                            "type": "string",
+                            "format": "textarea",
+                            "label": "الوصف",
+                            "multilanguage": true
+                        },
+                        {
+                            "id": "cospecail.category_id",
+                            "type": "items",
+                            "format": "dropdown-list",
+                            "label": "التصنيف",
+                            "source": "Categories",
+                            "required": true,
+                            "value": [],
+                            "multichoice": true,
+                            "searchable": true,
+                            "public": true
+                        },
+                        {
+                            "id": "cospecail.limit",
+                            "type": "number",
+                            "format": "integer",
+                            "label": "عدد المنتجات",
+                            "value": 6,
+                            "minimum": 3,
+                            "maximum": 8
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": 5
+                }
+            ]
+        }
+    ]
 }

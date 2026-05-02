@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سلة مستقلة</title>
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: #161616;
+        background: #f7f3ea;
+      }
+
+      .preview {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .preview h1 {
+        margin: 0 0 12px;
+        font-size: 32px;
+      }
+
+      .preview p {
+        max-width: 640px;
+        margin: 0 0 24px;
+        color: #5c5c5c;
+        line-height: 1.8;
+      }
+
+      .product {
+        width: min(360px, 100%);
+        display: grid;
+        gap: 14px;
+        padding: 16px;
+        border: 1px solid #e7e1d6;
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .product strong {
+        font-size: 18px;
+      }
+
+      .product button {
+        min-height: 44px;
+        border: 0;
+        border-radius: 8px;
+        color: #161616;
+        background: #d7a83f;
+        cursor: pointer;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="preview">
+      <h1>سلة مستقلة</h1>
+      <p>صفحة معاينة سريعة لمكون السلة. اضغط زر الإضافة ثم افتح السلة العائمة أسفل الصفحة.</p>
+
+      <section class="product">
+        <strong>ساعة ذهبية</strong>
+        <span>129.00 ر.س</span>
+        <button id="add-product" type="button">إضافة للسلة</button>
+      </section>
+    </main>
+
+    <salla-independent-cart></salla-independent-cart>
+
+    <script type="module">
+      import IndependentCart from './src/components/independent-cart/index.ts';
+
+      if (!customElements.get('salla-independent-cart')) {
+        customElements.define('salla-independent-cart', IndependentCart);
+      }
+
+      document.querySelector('#add-product').addEventListener('click', () => {
+        window.dispatchEvent(new CustomEvent('tw-cart:add', {
+          detail: {
+            id: 'gold-watch',
+            name: 'ساعة ذهبية',
+            price: 129,
+            quantity: 1
+          }
+        }));
+      });
+    </script>
+  </body>
+</html>
