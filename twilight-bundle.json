@@ -1,14 +1,14 @@
 {
     "name": {
-        "en": "Golden",
-        "ar": "ذهبي"
+        "ar": "عرض ذهبي",
+        "en": "Golden"
     },
     "description": {
-        "en": "",
-        "ar": ""
+        "ar": null,
+        "en": null
     },
     "author_email": "Almogerayaseen@gmail.com",
-    "support_url": "",
+    "support_url": null,
     "repository": "https://github.com/almogerayaseen/tw-golden",
     "components": [
         {
